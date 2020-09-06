@@ -1,0 +1,30 @@
+{
+	"singleQuote": true,
+	"trailingComma": "all",
+	"useTabs": true,
+	"tabWidth": 4,
+	"printWidth": 130,
+	"arrowParens": "avoid",
+	"bracketSpacing": false,
+	"svelteSortOrder": "scripts-markup-styles",
+	"overrides": [
+		{
+			"files": [".prettierrc"],
+			"options": {
+				"parser": "json"
+			}
+		},
+		{
+			"files": "*.ts",
+			"options": {
+				"parser": "typescript"
+			}
+		},
+		{
+			"files": ["package.json"],
+			"options": {
+				"printWidth": 180
+			}
+		}
+	]
+}
