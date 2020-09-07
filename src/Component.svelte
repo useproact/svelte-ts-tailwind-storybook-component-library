@@ -1,6 +1,6 @@
 <script>
 	export let name;
-	var c = "test";
+	var c = 'test';
 </script>
 
 <h1>hello, {name}!</h1>
