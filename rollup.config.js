@@ -2,6 +2,7 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
+import postcss from 'rollup-plugin-postcss';
 import pkg from './package.json';
 
 const name = pkg.name
@@ -12,14 +13,15 @@ const name = pkg.name
 export default {
 	input: 'src/index.ts',
 	output: [
-		{ file: pkg.module, 'format': 'es' },
-		{ file: pkg.main, 'format': 'umd', name }
+		{file: pkg.module, format: 'es'},
+		{file: pkg.main, format: 'umd', name},
 	],
 	plugins: [
 		svelte({
-            preprocess: sveltePreprocess()
-        }),
-        typescript({sourceMap: false}),
-		resolve()
-	]
+			preprocess: sveltePreprocess({postcss: true}),
+		}),
+		postcss(),
+		typescript({sourceMap: false}),
+		resolve(),
+	],
 };

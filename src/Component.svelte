@@ -1,11 +1,11 @@
-<script lang="ts">
-	let name: string = 'component';
+<script>
+	export let name;
 </script>
 
-<h1 class="hello">Hello {name}</h1>
+<h1>hello, {name}!</h1>
 
 <style>
-	.hello {
-		text-align: center;
+	h1 {
+		@apply text-purple-500;
 	}
 </style>
