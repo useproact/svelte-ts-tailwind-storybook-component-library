@@ -1,3 +1,4 @@
-import './assets/styles/main.css';
+import './assets/main.css';
 
-export {default as Component} from './Component.svelte';
+// eslint-disable-next-line import/prefer-default-export
+export { default as Component } from './Component.svelte';
